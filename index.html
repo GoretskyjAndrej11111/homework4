@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework4</title>
+</head>
+<body>
+    <script>
+        
+        function showTriangle () {
+            
+        var triangle = '';
+        var number = prompt ('введите число');
+        var sumbol = prompt ('введите символ');
+        var open = true;
+         
+        massege: for(var i=0; i<number; i++) { 
+            for(var j=0; j<i; j++) {
+                if (sumbol.length >= 2) {
+                    open = false;
+                    alert('введите один символ');
+                } else {
+                    open = true;
+                }
+                if (!open) break massege;
+                    triangle += sumbol;
+    	       }
+                triangle += sumbol + '\n';           
+	       } 
+	       alert(triangle);
+            
+        }
+        
+        showTriangle ();
+        
+        
+        function f(a = 2, b = 3, c) {
+            if(typeof c === 'function') {
+                return c();
+            } else {
+                function sum(a, b) {
+                    return a + b;
+                }
+                return sum(a, b);
+            }
+            
+        }
+
+        var result = f();
+        console.log(result);
+        
+    </script>
+</body>
+</html>
